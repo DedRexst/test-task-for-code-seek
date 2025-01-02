@@ -1,0 +1,23 @@
+spring:
+  application.name: testTaskForCodeSeek
+  profiles.active: default
+  output.ansi.enabled: always
+  datasource:
+    url: jdbc:h2:file:./test_task_for_seek
+    username: sa
+    password: password
+    driver-class-name: org.h2.Driver
+#    url: jdbc:postgresql://localhost:5432/test_task_for_seek
+#    username: postgres
+#    password: root
+#    driver-class-name: org.postgresql.Driver
+  jpa:
+    open-in-view: false
+    hibernate.ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    baseline-on-migrate: true
+    validate-on-migrate: true
